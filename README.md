@@ -3,14 +3,15 @@
 xgetres is a simple utility which prints the value of an X resource.
 
 ## Example
-
-    $ cat ~/.Xresources
-    simple: 1
-    *wildcard: 2
-    $ xgetres simple
-    1
-    $ xgetres foo.wildcard
-    2
+```basg
+$ cat .Xresources
+first: 1
+second: 2
+$ xgetres first
+1
+$ xgetres second
+2
+```
 
 ## Build & installation
 
@@ -18,13 +19,11 @@ First make sure you have libx11.
 
 In order to build, simply run:
 
-    $ make
+```bash
+$ make
+```
 
 Then in order to install, run:
-
-    $ sudo make install
-
-Installation location is determined by the `PREFIX` variable
-(`/usr/local` by default), you can specify a different location like this:
-
-    $ sudo make install PREFIX=/app
+```bash
+$ make install
+```
